@@ -1,0 +1,194 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    }
+    
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+nav {
+    background-color: beige;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-transform: uppercase;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    }
+
+footer {
+    height: 50px;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#quem {
+    text-align: center;
+}
+
+#oque {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.reserve a {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#info a {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+.reserve a:hover,
+.reserve a:focus {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+#info a:hover,
+#info a:focus {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+#pague {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+h3 {
+    text-transform: uppercase;
+    font-size: 17px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+button {
+    padding: 10px;
+    border: none;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    border: solid;
+}
+
+button:hover, button:focus { background-color: burlywood;}
+
+form {
+    background-color:  beige;
+    width: 80%;
+    margin: auto;
+    padding: 15PX;
+    border-radius: 10PX;
+}
+
+form p {
+    text-align: justify ;
+}
+
+article p {
+    text-align: justify
+
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+
+#nome, #email, #tel, #mensagem {
+/* dar mesmo tamanho pros campos caixa, largura width, altura height */
+    width: 100%;
+    height: 30px;
+}
+/* border: none --- se quiser sem borda */
+
+#mensagem { height: auto; }
+/* altura vai voltar a automatica */
+
+footer { margin-top: 50px; }
+
+table   {
+        text-align: center;
+        background-color:  beige;
+        width: 80%;
+        margin: auto;
+        padding: 15PX;
+        border-radius: 10PX;
+        border: solid;
+    }
+
+    table, td, th {
+        border: solid 2px white;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+tr, th {  background-color: burlywood; }
+tr:nth-child(odd) {  background-color: bisque; }
+tr:nth-child(even) {  background-color: beige; }
+
+p, article  {
+    text-align: center;
+    padding: 5px;
+}
+    
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .limitador  {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota LGBT</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+
+    <!-- CABEÇALHO -->
+
+    <header>
+        <a href="https://instagram.com/rota.lgbt" target="_blank">
+            <img src="../imagens/insta.png" alt="Instagram Rota Lgbt">
+        </a>
+        
+        <a href="index.html">
+            <img src="../imagens/logo.png" alt="Logo Rota Lgbt">          
+        </a>
+
+        <a href="https://wa.me/5511947750949" target="_blank">
+            <img src="../imagens/whats.png" alt="Whatsapp Rota Lgbt">
+        </a>        
+        
+    </header>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    
+    <!-- CONTEÚDO -->
+
+    <h2>Entre em Contato</h2>
+    
+    <div class="limitador">
+      <p>Se você deseja mais informações, preencha o formulário abaixo:
+      </p>
+      
+      <form id="my-form" action="https://formspree.io/f/mnqrvwkz" method="post">
+          <p>
+              <label for="nome">Nome:</label>
+              <input type="text" name="nome" id="nome">
+          </p>
+          <p>
+              <label for="email">E-mail:</label>
+              <input type="email" name="email" id="email">
+          </p>
+      
+          <p>
+              <label for="tel">Whatsapp:</label>
+              <input type="tel" name="tel" id="tel">
+          </p>
+          <p>
+              <label for="mensagem">Mensagem:</label> <br>
+              <textarea name="mensagem" id="mensagem" cols="30" rows="4"></textarea>
+          </p>
+      
+          <p>
+              <button type="submit">Enviar Dados</button>
+          </p>
+          <p id="my-form-status"></p>
+        </form>
+    </div>
+
+
+
+
+    <!-- RODAPÉ -->
+
+    
+
+
+
+
+
+<footer>
+  Feito por @alessandramendonca - Copyright 2022 
+  Todos os Direitos Reservados       
+</footer>
+
+
+
+
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Obrigado por sua Mensagem!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! Algo deu errado"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! Não funcionou"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
+
+
+
+</body>
+</html>
