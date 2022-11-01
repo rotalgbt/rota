@@ -185,7 +185,7 @@ p, article  {
 
 @media screen and (min-width: 1000px) {
     .limitador  {
-        max-width: 600px;
+        max-width: 1000px;
         margin: auto;
     }
 
